@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherAPI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+      <video autoplay loop muted id="videobackground" width="100%">
+        <source src="video/clear_day.mp4" type="video/mp4">
+      </video>
+      <div class="mainContainer">
+      <div class="searchbox">
+          <input type="search" name="search" id="search" placeholder="Search here">
+          <button id="button" name="button" class="button">Search</button>
+      </div>
+      <div class="weatherAreaContainer">
+
+        <div class="locationNameContainer">
+          <div class="cityTarget" id="cityTarget"></div>
+          &nbsp; 
+          <div class="cityCountry" id="cityCountry"></div>
+        </div>
+
+        <div class="currentTimeContainer">
+          <div>Tiempo Actual</div>
+          <div class="labelLocalTime" id="localTime"></div>
+        </div>
+
+        <div class="summaryContainer">
+
+          <div class="currentWeather">
+            <div class="weatherIcon" id="weatherIcon">
+              <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" id="icon" alt="weather Icon">
+            </div> 
+            <div class="currentTemp" id="currentTemp"></div>
+            <div class="currentDescription">
+              <div class="weatherDesc" id="weatherDesc"></div>
+              <div class="feelsLike" id="feelsLike"></div>
+            </div>
+          </div>
+
+          <div class="summaryForecastDay">
+          <div class="conditionDay" id="conditionDay"></div>
+          <div class="params" id="maxTemp"></div>
+          </div>
+        </div>
+
+        <div class="detailContainer">
+          <div class="detailItemLine">
+            
+            <div class="detailItemGrid">
+              <div class="detailItemTittle">Calidad del aire</div>
+              <div id="airQuality"></div>
+            </div>
+
+            <div class="detailItemGrid">
+              <div class="detailItemTittle">Humedad</div>
+              <div id="humidity"></div>
+            </div>
+
+            <div class="detailItemGrid">
+              <div class="detailItemTittle">Viento</div>
+              <div id="wind"></div>
+            </div>
+          
+            <div class="detailItemGrid">
+              <div class="detailItemTittle">Visibilidad</div>
+              <div id="visibility"></div>
+            </div>
+
+            <div class="detailItemGrid">
+              <div class="detailItemTittle">Presión</div>
+              <div id="pressure"></div>
+            </div>
+
+            <div class="detailItemGrid">
+              <div class="detailItemTittle">Índice UV</div>
+              <div id="uvIndex"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+<div class="forecastAreaContainer">
+  <div class="forecastItemLine">
+    <div class="forecastItemToday">
+      <div class="forecastItemTittle">Hoy</div>
+      <div class="forecastItemGrid">
+        <div class="forecastIconToday">
+          <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" id="forecastIconToday" alt="Forecast Icon">
+        </div>
+        <div class="forecastItemTemp">
+          <div id="forecastTodayMaxTemp"></div>
+          <div id="forecastTodayMinTemp"></div>
+        </div>
+        <div class="forecastItemCondition">
+          <div id="forecastItemTodayCondition"></div>
+          <div class="forecastItemTodayRain">
+            <img src="./img/raindrop.svg" alt="">
+            <div id="forecastItemTodayRain"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="forecastItemNext">
+      <div class="forecastItemTittle">Mañana</div>
+      <div class="forecastItemGrid">
+        <div class="forecastIconTomorrow">
+          <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" id="forecastIconTomorrow" alt="Forecast Icon">
+        </div>
+        <div class="forecastItemTemp">
+          <div id="forecastTomorrowMaxTemp"></div>
+          <div id="forecastTomorrowMinTemp"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="forecastItemNext">
+      <div class="forecastItemTittle">Pasado mañana</div>
+      <div class="forecastItemGrid">
+        <div class="forecastIconBeforeTomorrow">
+          <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" id="forecastIconBeforeTomorrow" alt="Forecast Icon">
+        </div>
+        <div class="forecastItemTemp">
+          <div id="forecastAfterTomorrowMaxTemp"></div>
+          <div id="forecastAfterTomorrowMinTemp"></div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</div>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
